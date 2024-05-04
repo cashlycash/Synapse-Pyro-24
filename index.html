@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vector Simulation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="map"></div>
+
+    <div class="panel">
+      <button onclick="calc()">Calculate</button>
+      <button onclick="reset()">Reset</button>
+      <button onclick="test()">Rand Values</button>
+      <button onclick="redMode()">Red Light Mode</button>
+      <button onclick="showLegend()">Legend</button>
+    </div>
+
+    <div class="legend">
+      <h2>Legend</h2>
+      <p>
+        <span>Cars:</span> Cars waiting on a red light<br />
+        <span>Time-per-Car:</span> Time between two cars passing<br />
+        <span>Limit:</span> Max cars the road can hold at one time
+      </p>
+    </div>
+
+    <div class="control">
+      <div class="junction" id="B">
+        <h2>Junction B</h2>
+        <div class="road" id="AB">
+          <h3>Road AB</h3>
+          <div class="parameter" id="cars">
+            <span>Cars:</span>
+            <input type="number" placeholder="Cars waiting on a red light" />
+          </div>
+          <div class="parameter" id="tpc">
+            <span>Time-per-Car:</span>
+            <input type="number" placeholder="Time between two cars passing" />
+          </div>
+          <div class="parameter" id="limit">
+            <span>Limit:</span>
+            <input
+              type="number"
+              placeholder="Max cars the road can hold at one time"
+            />
+          </div>
+        </div>
+        <div class="road" id="CB">
+          <h3>Road CB</h3>
+          <div class="parameter" id="cars">
+            <span>Cars:</span>
+            <input type="number" placeholder="Cars waiting on a red light" />
+          </div>
+          <div class="parameter" id="tpc">
+            <span>Time-per-Car:</span>
+            <input type="number" placeholder="Time between two cars passing" />
+          </div>
+          <div class="parameter" id="limit">
+            <span>Limit:</span>
+            <input
+              type="number"
+              placeholder="Max cars the road can hold at one time"
+            />
+          </div>
+        </div>
+        <div class="road" id="DB">
+          <h3>Road DB</h3>
+          <div class="parameter" id="cars">
+            <span>Cars:</span>
+            <input type="number" placeholder="Cars waiting on a red light" />
+          </div>
+          <div class="parameter" id="tpc">
+            <span>Time-per-Car:</span>
+            <input type="number" placeholder="Time between two cars passing" />
+          </div>
+          <div class="parameter" id="limit">
+            <span>Limit:</span>
+            <input
+              type="number"
+              placeholder="Max cars the road can hold at one time"
+            />
+          </div>
+        </div>
+        <div class="road" id="EB">
+          <h3>Road EB</h3>
+          <div class="parameter" id="cars">
+            <span>Cars:</span>
+            <input type="number" placeholder="Cars waiting on a red light" />
+          </div>
+          <div class="parameter" id="tpc">
+            <span>Time-per-Car:</span>
+            <input type="number" placeholder="Time between two cars passing" />
+          </div>
+          <div class="parameter" id="limit">
+            <span>Limit:</span>
+            <input
+              type="number"
+              placeholder="Max cars the road can hold at one time"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="junction" id="F">
+        <h2>Junction F</h2>
+        <div class="road" id="EF">
+          <h3>Road EF</h3>
+          <div class="parameter" id="cars">
+            <span>Cars:</span>
+            <input type="number" placeholder="Cars waiting on a red light" />
+          </div>
+          <div class="parameter" id="tpc">
+            <span>Time-per-Car:</span>
+            <input type="number" placeholder="Time between two cars passing" />
+          </div>
+          <div class="parameter" id="limit">
+            <span>Limit:</span>
+            <input
+              type="number"
+              placeholder="Max cars the road can hold at one time"
+            />
+          </div>
+        </div>
+        <div class="road" id="XF">
+          <h3>Road XF</h3>
+          <div class="parameter" id="cars">
+            <span>Cars:</span>
+            <input type="number" placeholder="Cars waiting on a red light" />
+          </div>
+          <div class="parameter" id="tpc">
+            <span>Time-per-Car:</span>
+            <input type="number" placeholder="Time between two cars passing" />
+          </div>
+          <div class="parameter" id="limit">
+            <span>Limit:</span>
+            <input
+              type="number"
+              placeholder="Max cars the road can hold at one time"
+            />
+          </div>
+        </div>
+        <div class="road" id="GF">
+          <h3>Road GF</h3>
+          <div class="parameter" id="cars">
+            <span>Cars:</span>
+            <input type="number" placeholder="Cars waiting on a red light" />
+          </div>
+          <div class="parameter" id="tpc">
+            <span>Time-per-Car:</span>
+            <input type="number" placeholder="Time between two cars passing" />
+          </div>
+          <div class="parameter" id="limit">
+            <span>Limit:</span>
+            <input
+              type="number"
+              placeholder="Max cars the road can hold at one time"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="junction" id="H">
+        <h2>Junction H</h2>
+        <div class="road" id="GH">
+          <h3>Road GH</h3>
+          <div class="parameter" id="cars">
+            <span>Cars:</span>
+            <input type="number" placeholder="Cars waiting on a red light" />
+          </div>
+          <div class="parameter" id="tpc">
+            <span>Time-per-Car:</span>
+            <input type="number" placeholder="Time between two cars passing" />
+          </div>
+          <div class="parameter" id="limit">
+            <span>Limit:</span>
+            <input
+              type="number"
+              placeholder="Max cars the road can hold at one time"
+            />
+          </div>
+        </div>
+        <div class="road" id="YH">
+          <h3>Road YH</h3>
+          <div class="parameter" id="cars">
+            <span>Cars:</span>
+            <input type="number" placeholder="Cars waiting on a red light" />
+          </div>
+          <div class="parameter" id="tpc">
+            <span>Time-per-Car:</span>
+            <input type="number" placeholder="Time between two cars passing" />
+          </div>
+          <div class="parameter" id="limit">
+            <span>Limit:</span>
+            <input
+              type="number"
+              placeholder="Max cars the road can hold at one time"
+            />
+          </div>
+        </div>
+        <div class="road" id="IH">
+          <h3>Road IH</h3>
+          <div class="parameter" id="cars">
+            <span>Cars:</span>
+            <input type="number" placeholder="Cars waiting on a red light" />
+          </div>
+          <div class="parameter" id="tpc">
+            <span>Time-per-Car:</span>
+            <input type="number" placeholder="Time between two cars passing" />
+          </div>
+          <div class="parameter" id="limit">
+            <span>Limit:</span>
+            <input
+              type="number"
+              placeholder="Max cars the road can hold at one time"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="logic.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

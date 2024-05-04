@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: mapFont;
+  src: url(consola.TTF);
+}
+
+body {
+  background-color: #000000;
+  color: #f3f3f3;
+  margin: 0;
+  min-height: 100vh;
+  font-family: mapFont;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h2,
+h3 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.map {
+  background-color: #151515;
+  margin: 10px;
+  padding: 2rem;
+  text-align: center;
+  font-size: 15px;
+}
+
+.panel {
+  background-color: #151515;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+}
+
+.panel button {
+  background-color: #383838;
+  color: white;
+  border: 1px #383838 solid;
+  margin: 10px;
+  padding: 10px;
+  flex: 1;
+}
+
+.panel button:hover {
+  border: 1px white solid;
+  cursor: pointer;
+}
+
+.legend {
+  display: none;
+  background-color: #151515;
+  margin: 10px;
+  padding: 10px;
+}
+
+.legend.show {
+  display: block;
+}
+
+.control {
+  background-color: #151515;
+  margin: 10px;
+  display: flex;
+}
+
+.control .junction {
+  margin: 10px;
+  flex: 1;
+}
+
+.control .road {
+  margin-bottom: 10px;
+}
+
+.control .parameter {
+  display: flex;
+}
+
+.control .parameter * {
+  flex: 1;
+}
+
+#cars {
+  display: none;
+}
+
+.control.red #cars {
+  display: flex;
+}
